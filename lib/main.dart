@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'screens/dashboard_screen.dart';
 import 'screens/tasks_screen.dart';
 
@@ -54,17 +53,11 @@ class _RootNavState extends State<RootNav> {
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(
-            icon: Icon(Icons.check_circle_outline),
-            label: 'Tasks',
-          ),
+              icon: Icon(Icons.check_circle_outline), label: 'Tasks'),
           BottomNavigationBarItem(
-            icon: Icon(Icons.bar_chart),
-            label: 'Progress',
-          ),
+              icon: Icon(Icons.bar_chart), label: 'Progress'),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
-            label: 'Profile',
-          ),
+              icon: Icon(Icons.person_outline), label: 'Profile'),
         ],
       ),
     );
@@ -85,15 +78,12 @@ class _ComingSoonScreen extends StatelessWidget {
           children: [
             const Icon(Icons.construction, size: 48, color: Colors.deepPurple),
             const SizedBox(height: 12),
-            Text(
-              '$label — Coming Soon',
-              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-            ),
+            Text('$label — Coming Soon',
+                style: const TextStyle(
+                    fontSize: 16, fontWeight: FontWeight.w600)),
             const SizedBox(height: 6),
-            const Text(
-              'Not implemented in this version',
-              style: TextStyle(color: Colors.grey, fontSize: 13),
-            ),
+            const Text('Not implemented in this version',
+                style: TextStyle(color: Colors.grey, fontSize: 13)),
           ],
         ),
       ),

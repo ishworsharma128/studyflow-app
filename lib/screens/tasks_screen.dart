@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/task.dart';
+import 'add_task_screen.dart';
 
 class TasksScreen extends StatefulWidget {
   const TasksScreen({super.key});
@@ -64,9 +65,18 @@ class _TasksScreenState extends State<TasksScreen> {
       backgroundColor: const Color(0xFFF5F3FF),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.deepPurple,
-        onPressed: () {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Add Task form goes here')),
+        onPressed: () async {
+          await Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => AddTaskScreen(
+                onAdd: (newTask) {
+                  setState(() {
+                    tasks.add(newTask);
+                  });
+                },
+              ),
+            ),
           );
         },
         child: const Icon(Icons.add),
